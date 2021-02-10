@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CustomerSearch;
 use Illuminate\Http\Request;
 use DB;
 

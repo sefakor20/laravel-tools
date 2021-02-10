@@ -49,7 +49,7 @@
        <div class="row mt-5">
            <div class="col-md-10 offset-1">
                <div class="table-responsive">
-                   <table id="customer_data" class="table table-bordered table-striped" >
+                   <table id="customer_data" class="table table-striped" >
                        <thead>
                            <tr>
                                <th>CustomerName</th>
@@ -63,6 +63,37 @@
                        <tbody>
                            
                        </tbody>
+                       {{-- <tfoot>
+                        <tr>
+                          <td>
+                            <input type="text"  placeholder="Search for first name..." class="form-control filter-input" data-column="0">
+                          </td>
+                          <td>
+                            <input type="text"  placeholder="Search for first email..." class="form-control filter-input" data-column="1">
+                          </td>
+                          <td>
+                            <input type="text"  placeholder="Search for first department..." class="form-control filter-input" data-column="2">
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <select data-column="0" class="form-control filter-select">
+                              <option value="">Select name...</option>
+                              @foreach ($countries as $name)
+                                  <option value="{{ $name }}">{{ $name }}</option>
+                              @endforeach
+                            </select>
+                          </td>
+                          <td>
+                            <select data-column="2" class="form-control filter-select">
+                              <option value="">Select department...</option>
+                              @foreach ($gender as $name)
+                                  <option value="{{ $name }}">{{ $name }}</option>
+                              @endforeach
+                            </select>
+                          </td>
+                        </tr>
+                      </tfoot> --}}
                    </table>
                </div>
            </div>

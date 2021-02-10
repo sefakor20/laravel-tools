@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\ItemSearchController;
 use App\Http\Controllers\CustomerSearchController;
 
@@ -20,6 +22,4 @@ Route::get('/', function () {
 });
 
 Route::get('/customsearch', [CustomerSearchController::class, 'index'])->name('customsearch.index');
-Route::get('algolia_search/items-lists', [ItemSearchController::class,'index'])->name('items-lists');
-Route::post('algolia_search/create-item', [ItemSearchController::class,'create'])->name('create-item');
-
+Route::get('/employee', [EmployeeController::class, 'index'])->name('employee.index');
