@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RaveController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\ItemSearchController;
@@ -23,3 +24,8 @@ Route::get('/', function () {
 
 Route::get('/customsearch', [CustomerSearchController::class, 'index'])->name('customsearch.index');
 Route::get('/employee', [EmployeeController::class, 'index'])->name('employee.index');
+
+// flutterwave payment route
+Route::get('/payment', [RaveController::class, 'formIndex'])->name('payment');
+Route::post('/pay', [RaveController::class, 'initialize'])->name('pay');
+Route::get('/rave/callback', [RaveController::class, 'callback'])->name('callback');
